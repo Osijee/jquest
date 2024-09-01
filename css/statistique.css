@@ -1,0 +1,57 @@
+.carterisitque {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 13px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.carterisitque h4 {
+  margin: 20px 10px 10px 10px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+.statTotal {
+  cursor: pointer;
+  height: 7px;
+  width: 220px;
+  margin: 8px 0 20px 0;
+  border-radius: 9999px;
+  background-color: #000000a2;
+  position: relative;
+}
+
+.statTotal:hover .detailStat {
+  display: block;
+}
+
+.stat {
+  height: 7px;
+  width: 120px;
+  border-radius: 9999px;
+  background-color: #ffff2e;
+}
+
+.detailStat {
+  background-color: #171717;
+  color: #fff;
+  font-size: 0.8em;
+  position: absolute;
+  font-weight: 800;
+  border-radius: 8px;
+  z-index: 100;
+  bottom: 10px;
+  left: 12px;
+  padding: 12px;
+  display: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cartRigh p {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 10px 0;
+}

@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Gabriola;
+  src: url("../fonts/Gabriola.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Lato, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  color: #aaa;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #404040, #aaa);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to top, #151515, #404040);
+}
+
+body {
+  /* background: #252525; */
+  background: url("../images/resto.jpg") no-repeat fixed;
+  background-size: cover;
+  animation: 0.2s animBackground;
+}
+
+@keyframes animBackground {
+  0% {
+    background-position: 0 50px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+}
+
+.title_ {
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+  background-color: #000000b0;
+  padding: 20px 0;
+  box-shadow: 0 0 20px #000;
+  border-radius: 18px;
+  font-size: 1.1em;
+  width: 50vw;
+  text-align: center;
+}
+
+.leftLogo {
+  background: radial-gradient(#000000, #0000002c, #00000000);
+  animation: 1s darkBack infinite;
+  rotate: -5deg;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+}
+
+.containPub {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  display: flex;
+}
+.containPub img {
+  height: 100%;
+  animation: 5s pubWalk infinite;
+}
+
+.miniLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#fff, transparent, transparent);
+  border-radius: 50%;
+  animation: 2s miniLightA infinite;
+}
+
+@keyframes pubWalk {
+  0% {
+    translate: 0 0;
+  }
+  100% {
+    translate: -100% 0;
+  }
+}
+@keyframes miniLightA {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 80%;
+    left: 0;
+  }
+  50% {
+    top: 80%;
+    left: 80%;
+  }
+  75% {
+    top: 0;
+    left: 80%;
+  }
+}
+.logoCentrale {
+  width: 100%;
+  animation: 0.5s lightLogo ease-in infinite;
+  padding: 10%;
+}
+
+@keyframes darkBack {
+  0% {
+    rotate: -5deg;
+  }
+  50% {
+    rotate: 5deg;
+  }
+}
+
+@keyframes lightLogo {
+  0% {
+    filter: drop-shadow(0 0 2px #fff);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #fff);
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/jq.png" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link rel="stylesheet" href="../css/filterBox.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/loader.css" />
+    <title>JQuest</title>
+  </head>
+  <body>
+    <div class="loader">
+      <h4>JQuest</h4>
+      <p>Chargement ...</p>
+    </div>
+    <nav>
+      <div class="logo">
+        <h1>JQuest</h1>
+      </div>
+      <ul class="navLink">
+        <li class="contentA"><a href="../index.html">Home</a></li>
+        <li class="contentA">
+          <a href="#" style="color: #fff">Produits</a>
+        </li>
+        <li class="contentA"><a href="../pages/faq.html">FAQ</a></li>
+        <li class="contentA">
+          <div class="dropdownLi">
+            <div>
+              Ressource
+              <img
+                src="../images/icon/dropdown.png"
+                alt="dropdown"
+                title="dropdown"
+              />
+            </div>
+            <ul id="submenu">
+              <li>
+                <div>
+                  <img src="../images/icon/video.png" alt="movie" />Videos
+                </div>
+                <p>
+                  <a href="../pages/videos.html">
+                    Regarder des demonstration de notre productivité au sein de
+                    notre entreprise, admirer notre professionnalisme
+                  </a>
+                </p>
+              </li>
+              <li>
+                <div>
+                  <img src="../images/icon/contact.png" alt="rest" /> Contact
+                </div>
+                <p>
+                  <a href="../pages/contact.html">
+                    Vous pouvez nous contacter pour plus d'information. Si vous
+                    avez plus de question ou autre
+                  </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="searchBox">
+      <div class="inputBox">
+        <div class="inputSection">
+          <div class="contentBox">
+            <label for="Country"
+              ><img src="../images/icon/localisation.png" alt="loc" />
+              Cuisine</label
+            >
+            <div class="dropDown">
+              <input
+                type="text"
+                class="textBox"
+                placeholder="Italien"
+                id="region"
+                readonly
+              />
+              <div class="option">
+                <div onclick="show('Italien')">Italien</div>
+                <div onclick="show('Français')">Français</div>
+                <div onclick="show('Chinois')">Chinois</div>
+                <div onclick="show('Américain')">Américain</div>
+              </div>
+            </div>
+          </div>
+          <div class="contentBox">
+            <label for="pers">
+              <img src="../images/icon/groupe.png" alt="pers" />
+              Quantité</label
+            >
+            <input type="number" id="pers" max="100" min="1" placeholder="1" />
+          </div>
+        </div>
+        <div class="inputSection">
+          <div class="contentBox">
+            <label for="typeSearch"
+              ><img src="../images/icon/eyes.png" alt="pers" />Popularité</label
+            >
+
+            <div class="dropDown">
+              <input
+                type="text"
+                class="textBoxType"
+                placeholder="5 étoiles"
+                id="typeHot"
+                readonly
+              />
+              <div class="option">
+                <div onclick="showType('5 étoiles')">5 étoiles</div>
+                <div onclick="showType('4 étoiles')">4 étoiles</div>
+                <div onclick="showType('3 étoiles')">3 étoiles</div>
+                <div onclick="showType('2 étoiles')">2 étoiles</div>
+                <div onclick="showType('1 étoile')">1 étoile</div>
+              </div>
+            </div>
+          </div>
+          <div class="contentBox">
+            <label for="gold">
+              <img src="../images/icon/price.png" alt="price" />
+              Prix</label
+            >
+            <input
+              type="number"
+              id="gold"
+              placeholder="maximum"
+              min="10000"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="btn-search-advanced">
+        <img src="../images/icon/searchAdv.png" alt="search" />
+      </div>
+    </div>
+
+    <div class="containerBody">
+      <div class="filterBox">
+        <h2>Trier par <img src="../images/icon/filtre2.png" alt="filter" /></h2>
+        <p>
+          <button class="btnFilter" onmouseleave="" onclick="popular_plat()">
+            Popularité &cir;
+          </button>
+          <button class="btnFilter" onclick="stock_plat()">Stock &cir;</button>
+          <button class="btnFilter" onclick="price_plat()">Prix &cir;</button>
+          <button class="btnFilter" onclick="acces_plat()">
+            Disponibilité &cir;
+          </button>
+          <span id="backSelect"></span>
+        </p>
+      </div>
+      <div class="res">
+        <p class="resultSearch">Tout les batiments</p>
+        <section class="productContent" id="containerP"></section>
+      </div>
+    </div>
+  </body>
+  <script src="../js/plats.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/styleInput.js"></script>
+  <script src="../js/filterSelect.js"></script>
+  <script src="../js/viewMore.js"></script>
+  <script>
+    affichage_hotel(hotels_db);
+  </script>
+  <script src="../js/loader.js"></script>
+</html>

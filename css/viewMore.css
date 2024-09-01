@@ -1,0 +1,230 @@
+.container {
+  display: none;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: transparent;
+  height: 100%;
+  gap: 10px;
+}
+
+.leftPage {
+  min-width: 300px;
+  width: 30vw;
+  background-color: transparent;
+  position: relative;
+  flex: 1;
+  margin-bottom: 20px;
+  height: 100%;
+  /* backdrop-filter: blur(20px); */
+  border-top-right-radius: 25px;
+  background-color: #0000009f;
+  box-shadow: 0 50px 20px 10px #0000009f;
+}
+
+.leftPage nav {
+  padding: 2vh 0.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+
+.leftPage nav a {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.leftPage img {
+  height: 100%;
+}
+
+.searchBar {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.searchBar input {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 3vh 2vw;
+  border: none;
+  outline: none;
+}
+.searchBar input::placeholder {
+  color: #cacaca;
+}
+.searchBar button {
+  position: absolute;
+  top: 2.5vh;
+  right: 2vw;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.rightPage {
+  width: 100%;
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #00000065;
+  backdrop-filter: blur(20px);
+}
+
+.spaceProduct {
+  width: 100%;
+  flex: 2;
+  overflow: auto;
+  min-width: 300px;
+  color: #dfdfdf;
+}
+
+.rightPage h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  font-style: italic;
+  padding: 10px 20px 0 20px;
+  color: #fff;
+}
+
+.etoile {
+  display: flex;
+  height: 0.6em;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.spaceProduct img {
+  width: 100%;
+}
+.etoile img {
+  height: 100%;
+  width: auto;
+}
+
+.spaceFood {
+  height: 100vh;
+  min-width: 300px;
+  flex: 1;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  padding: 0 10px;
+}
+
+.spaceFood h2 {
+  padding: 2vh 0;
+  width: 80%;
+  color: #fff;
+  margin: 10px 10%;
+  border-radius: 20px;
+  border: 1px solid #8d8d8d;
+  text-align: center;
+  background-color: #17171762;
+}
+
+.platSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ingredient {
+  margin: 10px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(to right, #ffffff4d, #0000005d);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.ingredient:hover {
+  background: #fff;
+}
+.ingredient:hover p {
+  color: #171717;
+}
+.ingredient:hover h3 {
+  color: #000000;
+}
+
+.platSection img {
+  height: 100%;
+  max-height: 80px;
+}
+
+.detailPlat {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 8px;
+  padding: 8px 0;
+  margin-right: 20px;
+}
+.detailPlat h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  max-width: 120px;
+  text-align: end;
+  color: #fff;
+}
+.detailPlat p {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.place {
+  color: #f1f1fa;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0 20px;
+}
+
+.pdp {
+  width: 120px;
+}
+
+.suggestion {
+  cursor: pointer;
+  color: #aaaaaa;
+  transition: 0.3s ease;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #dfdfdf04;
+  backdrop-filter: blur(20px);
+}
+.suggestion:hover {
+  /* transform: translateX(10px); */
+  padding: 0 10px 0 0;
+  transition: 0.5s;
+  animation: 0.5s suggHover infinite;
+}
+
+.dlcClass {
+  color: yellow;
+  margin: 10px 5px;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-shadow: 0 0 20px yellow;
+}
+
+@keyframes suggHover {
+  0% {
+    background-color: #000000b2;
+    background-position: 100px 0;
+  }
+  to {
+    background-color: #00000073;
+    background-position: 0 0;
+  }
+}

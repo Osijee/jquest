@@ -1,0 +1,60 @@
+nav {
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 50px;
+  align-items: center;
+  transition: 0.2s;
+  background-color: #0000009d;
+}
+.arrowL {
+  height: 50px;
+  transition: 0.3s;
+}
+.arrowL:hover {
+  filter: drop-shadow(5px 5px 5px #000);
+  translate: -2px -2px;
+}
+
+nav div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+nav div img {
+  height: 50px;
+}
+
+nav div h1 {
+  color: #fff;
+}
+
+.containContact {
+  display: flex;
+  margin: 10vh 5vw;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  width: 30vw;
+  min-width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #000000ce;
+  color: #fff;
+  border: 1px solid #4e4e4e;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.box1 {
+  flex: 2;
+}
+.box2 {
+  flex: 2;
+}
+.box3 {
+  flex: 1;
+}

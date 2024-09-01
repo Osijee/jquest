@@ -1,0 +1,160 @@
+nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px 0 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: #000000b4;
+  backdrop-filter: blur(20px);
+  z-index: 800;
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+  justify-content: left;
+  flex: 1;
+  padding: 15px 20px;
+}
+
+.contentA {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navLink li a,
+.dropdownLi {
+  color: #aaa;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  font-family: Poppins;
+}
+
+.navLink li a:hover {
+  color: #fff;
+  text-shadow: 0 0 30px #f1f1fa;
+}
+
+.dropdownLi {
+  position: relative;
+}
+
+.dropdownLi div img[title="dropdown"] {
+  height: 1.5em;
+  position: absolute;
+  top: 0px;
+  left: 95%;
+  transition: 0.3s ease-in-out;
+}
+
+.dropdownLi div {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #151515;
+  font-size: 1.5em;
+  font-weight: 800;
+  padding: 15px 80px 15px 20px;
+  background: linear-gradient(to left, transparent, #f1f1fa);
+}
+
+#submenu {
+  position: absolute;
+  top: 34px;
+  right: -25px;
+  z-index: 10;
+  color: #151515;
+  background-color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: 0.2s submenuAppear ease;
+  border-radius: 8px;
+}
+
+#submenu li {
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+#submenu li p {
+  text-align: left;
+  width: 20vw;
+}
+
+#submenu li p a {
+  color: #404040;
+  font-size: 0.8em;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+}
+
+#submenu li p a:hover {
+  color: #aaa;
+}
+
+#submenu li div {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+#submenu li div img {
+  height: 1.2em;
+  padding: 3px;
+}
+
+#submenu li:hover p {
+  color: #777777;
+}
+
+li:hover ul#submenu {
+  display: block;
+  top: 40px;
+}
+
+li:hover div img[title="dropdown"] {
+  rotate: 180deg;
+}
+
+@keyframes submenuAppear {
+  0% {
+    top: 30px;
+  }
+  to {
+    top: 40px;
+  }
+}
+
+@media (max-width: 592px) {
+  nav {
+    display: block;
+    padding: 0;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navLink {
+    padding: 20px;
+  }
+
+  .inputSection {
+    display: block;
+  }
+}

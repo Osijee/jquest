@@ -1,0 +1,32 @@
+.container article h2 {
+  font-family: Lato;
+  font-size: 1.8em;
+  font-weight: 800;
+  margin: 12px 0;
+  background: linear-gradient(to left, #17171762, #171717a4, #000);
+  color: #fff;
+  padding: 12px 5vw;
+}
+
+.container article {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  padding: 2% 0;
+}
+
+.container article p {
+  padding: 5vh 5vw;
+  font-size: Poppins;
+  font-weight: 500;
+  text-align: justify;
+  width: 80vw;
+  border-radius: 30px;
+  margin: 0 10vw 20px 10vw;
+  backdrop-filter: blur(20px);
+  color: #f1f1f1;
+  border: 1px solid #6e6e6e;
+  background: #0000009f;
+  /* background: linear-gradient(to top, #000, #000000b7, #00000079); */
+}
+.container article p:hover {
+  background-color: #000000d7;
+}

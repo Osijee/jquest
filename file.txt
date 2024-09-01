@@ -1,0 +1,21 @@
+const affichageSuggest = (hotels_db) => {
+  let hotels = hotels_db.filter((e) => e.id != hotel_use.id);
+  let stringReturn = "";
+  for (let i = 0; i < hotels.length; i++) {
+    stringReturn += `
+          <button class="platSection suggestion" onclick="review(${
+            hotels[i].id
+          })">
+            <img src=".${hotels[i].img}" class="pdp" alt="prd" />
+            <div class="detailPlat">
+              <h3>${hotels[i].name}</h3>
+              <div class="etoile">${createStrIcon(
+                hotels[i].popularity,
+                ".."
+              )}</div>
+            </div>
+          </button>
+    `;
+  }
+  return stringReturn;
+};

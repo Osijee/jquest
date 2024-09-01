@@ -1,0 +1,212 @@
+.searchBox {
+  margin: 30px 17px;
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 10px;
+  display: flex;
+  border: 1px solid #303030;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #0000004b;
+  backdrop-filter: blur(20px);
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 200;
+}
+
+.textBox::placeholder {
+  color: #252525;
+}
+.textBoxType::placeholder {
+  color: #252525;
+}
+
+.contentBox {
+  font-size: 1.2em;
+  color: #151515;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.inputBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.inputSection {
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contentBox label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #fff;
+}
+
+.contentBox label img {
+  width: auto;
+  height: 1em;
+}
+
+.contentBox input {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #1f1717;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.contentBox select {
+  border: 2px solid #dfdfdf;
+  padding: 10px 15px;
+  border-radius: 30px;
+  outline: none;
+  mask-image: none;
+}
+.contentBox select option {
+  background-color: #fff;
+  color: #242424;
+  margin: 18px 12px;
+  font-size: 1.3em;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#gold {
+  width: 150px;
+}
+#pers {
+  width: 80px;
+}
+.btn-search-advanced {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-search-advanced img {
+  width: 100%;
+}
+
+.btn-search-advanced:hover {
+  animation: 0.5s btn_hover ease infinite;
+}
+.btn-search-advanced:active {
+  background-color: #151515;
+}
+
+@keyframes btn_hover {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.07;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.dropDown {
+  position: relative;
+  width: 180px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #1f1717;
+}
+
+.dropDown::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #252525;
+  right: 20px;
+  z-index: 1;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  rotate: -45deg;
+  transition: 0.3s;
+  pointer-events: none;
+  top: 15px;
+}
+.dropDown.active::before {
+  top: 22px;
+  rotate: -225deg;
+}
+.dropDown.active .option {
+  display: block;
+}
+
+.dropDown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 550;
+}
+.dropDown input:focus {
+  border: none;
+  outline: none;
+}
+
+.dropDown .option {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  border: 1px solid #1f1717;
+  overflow: hidden;
+  display: none;
+  animation: 0.3s dropDownAppear ease;
+  z-index: 99;
+}
+
+.dropDown .option div {
+  padding: 8px 17px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.dropDown .option div:hover {
+  background-color: #181818;
+  color: #fff;
+}
+
+@keyframes dropDownAppear {
+  0% {
+    top: 34px;
+  }
+  to {
+    top: 50px;
+  }
+}
+
+@media (max-width: 584px) {
+  .inputBox {
+    display: block;
+  }
+}

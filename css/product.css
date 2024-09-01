@@ -1,0 +1,145 @@
+.productContent {
+  display: none;
+  margin-top: 20px;
+  flex: 1;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 220px;
+  height: fit-content;
+  position: relative;
+  transition: 0.5s ease;
+  /* padding: 8px; */
+  border-radius: 20px;
+  /* border: 1px solid #aaa; */
+  box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.35);
+  background-color: #00000098;
+  backdrop-filter: blur(10px);
+}
+
+.product strong {
+  padding: 0 20px;
+  color: #fff;
+}
+
+.product img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.nameProduct {
+  font-size: 1.8em;
+  font-family: Gabriola;
+  font-weight: 800;
+}
+
+.modal {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #00000081, #000000a6, transparent);
+  border-radius: 20px;
+  visibility: hidden;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.product:hover .modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal button {
+  border: 2px solid #fff;
+  padding: 8px 13px;
+  font-size: 1.3em;
+  font-family: Gabriola;
+  font-weight: 800;
+  color: #fff;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: 0.2s scale;
+}
+
+.modal button:hover {
+  background-color: #fff;
+  color: #000000;
+  scale: 1.1;
+  font-weight: 1000;
+}
+
+.access {
+  margin-bottom: 10px;
+}
+
+/* details sur les produits */
+.product p img {
+  width: 25px;
+}
+.product p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
+  padding: 0 20px;
+  color: #f1f1f1;
+}
+.product p:last-child {
+  padding-bottom: 10px;
+}
+
+/* Les liste de type d'accessibiliter */
+.goodAccess {
+  color: #fff;
+  padding: 5px 20px;
+  background-color: #33691e;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+.badAcces {
+  color: #fff;
+  padding: 5px 20px;
+  background-color: #eb0000;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+.moyenAcces {
+  color: #fff;
+  padding: 5px 20px;
+  background-color: #0d47a1;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.etoile {
+  display: flex;
+  height: 0.8em;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: -11px;
+  margin-bottom: 11px;
+  justify-content: end;
+  padding: 0 15px;
+}
+
+.etoile img {
+  height: 100%;
+  width: auto;
+}
+
+.resultSearch {
+  font-family: Poppins;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #fff;
+}
